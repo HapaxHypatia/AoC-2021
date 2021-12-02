@@ -1,4 +1,4 @@
-depths = list((int(x) for x in open("input.txt", "r").readlines()))
+depths = list((int(x) for x in open("depths.txt", "r").readlines()))
 
 
 def part1(data):
