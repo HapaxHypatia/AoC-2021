@@ -6,8 +6,8 @@ def part01(data):
     y = 0
 
     for item in data:
-        direction = item[:-2]
-        distance = int(item[-1])
+        direction = item.rstrip('0123456789').strip()
+        distance = int(item[len(direction):])
         match direction:
             case "forward": x += distance
             case "up": y -= distance
@@ -21,8 +21,8 @@ def part02(data):
     aim = 0
 
     for item in data:
-        direction = item[:-2]
-        distance = int(item[-1])
+        direction = item.rstrip('0123456789').strip()
+        distance = int(item[len(direction):])
         match direction:
             case "forward":
                 x += distance
