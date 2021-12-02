@@ -6,8 +6,9 @@ def part01(data):
     y = 0
 
     for item in data:
+        #distances must be 1 digit
         direction = item[:-2]
-        distance = int(item[-1])
+        distance = int(item[-1]) 
         match direction:
             case "forward": x += distance
             case "up": y -= distance
